@@ -4,7 +4,11 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = if params[:search]
+      Blog.where('name LIKE ?', "%#{params[:search]}%")
+    else
+      @blogs = Blog.all
+    end
   end
 
   # GET /blogs/1
