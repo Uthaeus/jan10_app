@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'pages/about'
 
+  get 'pages/donations'
+
   get 'pages/contact'
 
   resources :blogs
