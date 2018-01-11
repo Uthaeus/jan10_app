@@ -6,16 +6,25 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
   </head>
 
   <body>
+    <div class="top-bar">
+          <div class="row">
+            <div class="top-bar-left">
+              
+            </div>
+            <div class="top-bar-right">
+              <ul class="menu">
 
-    <%= form_tag(blogs_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search ...", class: "search-field" %>
-      <%= submit_tag "Search", :name => nil, class: "search-button" %>
-    <% end %>
+                <li><%= render 'shared/nav' %></li>
 
-    <%= render 'shared/nav' %>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
 
     <%= yield %>
   </body>

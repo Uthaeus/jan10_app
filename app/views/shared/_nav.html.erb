@@ -6,3 +6,10 @@
   <li><%= link_to "Donations", donations_path %></li>
 </ul>
 
+
+<li><%= form_tag(blogs_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search ...", class: "search-field" %></li>
+<li><%= submit_tag "Search", :name => nil, class: "button" %></li>
+
+<% end %>
+
