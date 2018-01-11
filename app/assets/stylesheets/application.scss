@@ -14,3 +14,11 @@
  *= require_self
  */
 @import "bootstrap";
+
+.nav-link a:hover {
+  background: transparent;
+}
+
+.nav-link:focus {
+  border-bottom: solid 0.05rem cornflowerblue;
+}
