@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-
+  access all: [:show, :index], user: { except: [:destroy, :new, :create, :update, :edit] }, site_admin: :all
   # GET /blogs
   # GET /blogs.json
   def index
@@ -14,6 +14,9 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @page_title = @blog.title
+    @blog = Blog.includes(:comments).find(params[:id])
+    @comment = Comment.new
   end
 
   # GET /blogs/new

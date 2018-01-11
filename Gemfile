@@ -58,3 +58,5 @@ gem 'devise', '~> 4.4'
 gem 'petergate', '~> 1.8', '>= 1.8.1'
 gem 'stripe'
 gem 'dotenv-rails', :groups => [:development, :test]
+gem 'redis', '~> 4.0', '>= 4.0.1'
+
