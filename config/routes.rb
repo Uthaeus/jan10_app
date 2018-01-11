@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   root to: "pages#home"
+  
+  get 'about', to: 'pages#about'
 
-  get 'pages/about'
+  get 'donations', to: 'pages#donations'
 
-  get 'pages/donations'
-
-  get 'pages/contact'
+  get 'contact', to: 'pages#contact'
 
   resources :blogs
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
