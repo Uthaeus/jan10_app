@@ -15,22 +15,13 @@
     <div class="top-bar">
       <div class="row">
         <div class="top-bar-left">
-          <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">Yeti Store</li>
-            <li class="has-submenu">
-              <a href="#">One</a>
-              <ul class="submenu menu vertical" data-submenu>
-                <li><a href="#">One</a></li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Two</a></li>
-            <li><a href="#">Three</a></li>
-          </ul>
+          
         </div>
         <div class="top-bar-right">
           <ul class="menu">
+
+            <li><%= render 'shared/nav' %></li>
+
             <li><input type="search" placeholder="Search"></li>
             <li><button type="button" class="button">Search</button></li>
           </ul>
@@ -43,11 +34,9 @@
     <div class="row columns">
       <nav aria-label="You are here:" role="navigation">
         <ul class="breadcrumbs">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Features</a></li>
-          <li class="disabled">Gene Splicing</li>
+          <li><%= link_to "Home", root_path %></li>
           <li>
-            <span class="show-for-sr">Current: </span> Cloning
+            <span class="show-for-sr">Current: </span> Donations
           </li>
         </ul>
       </nav>
@@ -55,19 +44,19 @@
 
     <div class="row">
       <div class="medium-6 columns">
-        <img class="thumbnail" src="http://placehold.it/650x350">
+        <img class="thumbnail" src="http://lorempixel.com/650/350">
         <div class="row small-up-4">
           <div class="column">
-            <img class="thumbnail" src="http://placehold.it/250x200">
+            <img class="thumbnail" src="http://lorempixel.com/250/200">
           </div>
           <div class="column">
-            <img class="thumbnail" src="http://placehold.it/250x200">
+            <img class="thumbnail" src="http://lorempixel.com/250/200">
           </div>
           <div class="column">
-            <img class="thumbnail" src="http://placehold.it/250x200">
+            <img class="thumbnail" src="http://lorempixel.com/250/200">
           </div>
           <div class="column">
-            <img class="thumbnail" src="http://placehold.it/250x200">
+            <img class="thumbnail" src="http://lorempixel.com/250/200">
           </div>
         </div>
       </div>
@@ -77,10 +66,10 @@
 
         <label>Size
         <select>
-          <option value="husker">Small</option>
-          <option value="starbuck">Medium</option>
-          <option value="hotdog">Large</option>
-          <option value="apollo">Yeti</option>
+          <option value="husker">Small | $</option>
+          <option value="starbuck">Medium | $</option>
+          <option value="hotdog">Large | $</option>
+          <option value="apollo">Dang! | $</option>
         </select>
         </label>
 
@@ -93,7 +82,7 @@
           </div>
         </div>
 
-        <a href="#" class="button large expanded">Buy Now</a>
+        <a href="#" class="button large expanded">Donate Now!</a>
 
         <div class="small secondary expanded button-group">
             <a class="button">Facebook</a>
@@ -106,14 +95,14 @@
     <div class="column row">
       <hr>
       <ul class="tabs" data-tabs id="example-tabs">
-        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Reviews</a></li>
+        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Donations</a></li>
       </ul>
       <div class="tabs-content" data-tabs-content="example-tabs">
         <div class="tabs-panel is-active" id="panel1">
-          <h4>Reviews</h4>
+          <h4>Featured Donations</h4>
           <div class="media-object stack-for-small">
             <div class="media-object-section">
-              <img class="thumbnail" src="http://placehold.it/200x200">
+              <img class="thumbnail" src="http://lorempixel.com/200/200">
             </div>
             <div class="media-object-section">
               <h5>Mike Stevenson</h5>
@@ -122,7 +111,7 @@
           </div>
           <div class="media-object stack-for-small">
             <div class="media-object-section">
-              <img class="thumbnail" src="http://placehold.it/200x200">
+              <img class="thumbnail" src="http://lorempixel.com/200/200">
             </div>
             <div class="media-object-section">
               <h5>Mike Stevenson</h5>
@@ -131,7 +120,7 @@
           </div>
           <div class="media-object stack-for-small">
             <div class="media-object-section">
-              <img class="thumbnail" src="http://placehold.it/200x200">
+              <img class="thumbnail" src="http://lorempixel.com/200/200">
             </div>
             <div class="media-object-section">
               <h5>Mike Stevenson</h5>
@@ -155,7 +144,8 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
-        <li class="float-right">Copyright 2016</li>
+        <li><a href="#">Donations</a></li>
+        <li class="float-right">Copyright 2018</li>
       </ul>
     </div>
 

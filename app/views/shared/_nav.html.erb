@@ -1,8 +1,8 @@
 
-<div>
-  <%= link_to 'Home', root_path %>
-  <%= link_to 'About', pages_about_path %>
-  <%= link_to 'Contact', pages_contact_path %>
-  <%= link_to 'Blogs', blogs_path %>
-  <%= link_to 'Donations', pages_donations_path %>
-</div>
+<ul class="dropdown menu" data-dropdown-menu>
+  <li><%= link_to "Home", root_path %></li>
+  <li><%= link_to "About", about_path %></li>
+  <li><%= link_to "Contact", contact_path %></li>
+  <li><%= link_to "Donations", donations_path %></li>
+</ul>
+
