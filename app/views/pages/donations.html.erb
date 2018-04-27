@@ -49,8 +49,24 @@
             <input type="text" id="middle-label" placeholder="One fish two fish">
           </div>
         </div>
+        <div class="custom-button">
+          <%= form_tag charges_path do %>
+            <article>
+              <% if flash[:error].present? %>
+                <div id="error_explanation">
+                  <p><%= flash[:error] %></p>
+                </div>
+              <% end %>
+              
+            </article>
 
-        <a href="#" class="button large expanded">Donate Now!</a>
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                    data-description="A month's subscription"
+                    data-amount="500"
+                    data-locale="auto">Donate Now!</script>
+          <% end %>
+        </div>
 
         <div class="small secondary expanded button-group">
             <a class="button">Facebook</a>
